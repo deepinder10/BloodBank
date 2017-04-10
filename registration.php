@@ -73,6 +73,9 @@
 
 						<tr><td class="lefttd">Password</td><td><input type="password" name="t6" required="required" pattern="[a-zA-Z0-9]{2,10}" title="please enter only character or numbers between 2 to 10 for password" /></td></tr>
 						<tr><td class="lefttd">Confirm Password</td><td><input type="password" name="t7" required="required" pattern="[a-zA-Z0-9 ]{2,10}" title="please enter only character or numbers between 2 to 10 for password" /></td></tr>
+						<tr><td class="lefttd">Weight</td><td><input type="number" name="t9" required="required" pattern="[0-9]" title="please enter weight" /></td></tr>
+						<tr><td class="lefttd">Alcoholic/Drug Consumer<br>TB/Jaundice History:</td><td><input type="text" name="t10" required="required"  title="please enter your history" /></td></tr>
+						<tr><td class="lefttd">Previous Blood Donation<br> and how many time:</td><td><input type="text" name="t11" required="required"  title="please enter how many times or -" /></td></tr>
 
 						<tr><td class="lefttd">Uplode Pic</td><td><input type="file" name="t8" /></td></tr>
 						<tr><td>&nbsp;</td><td><input type="submit" value="Registration" name="sbmt" style="border:0px; background:linear-gradient(#900,#D50000); width:100px; height:30px; border-radius:10px 1px 10px 1px; box-shadow:1px 1px 5px black; color:white; font-weight:bold; font-size:14px; text-shadow:1px 1px 6px black; "></td></tr></table>
@@ -115,7 +118,7 @@
 			}else{
 				if(move_uploaded_file($_FILES["t8"]["tmp_name"], $target_file)){
 					$cn=makeconnection();
-					$s="insert into donarregistration(name,gender,age,mobile,b_id,state_id,district_id,city_id,email,pwd,pic) values('" . $_POST["t1"] ."','" . $_POST["r1"] . "','" . $_POST["t2"] . "','" . $_POST["t3"] . "','" . $_POST["t4"] . "','". $_POST["state"] ."','". $_POST["district"] ."','". $_POST["city"] ."','" . $_POST["t5"] . "','" . $_POST["t6"] .  "','" . basename($_FILES["t8"]["name"])  ."')";
+					$s="insert into donarregistration(name,gender,age,mobile,b_id,state_id,district_id,city_id,email,pwd,pic,weight,history,previousstat) values('" . $_POST["t1"] ."','" . $_POST["r1"] . "','" . $_POST["t2"] . "','" . $_POST["t3"] . "','" . $_POST["t4"] . "','". $_POST["state"] ."','". $_POST["district"] ."','". $_POST["city"] ."','" . $_POST["t5"] . "','" . $_POST["t6"] .  "','" . basename($_FILES["t8"]["name"]). "','". $_POST["t9"] ."','". $_POST["t10"] ."','".  $_POST["t11"]   ."')";
 
 			//$s="INSERT INTO donarregistration(name,gender,age,mobile,b_id,email,pswd,pic) VALUES ([value-1],[value-2],[value-3],[value-4],[value-5],[value-6],[value-7],[value-8],[value-9])"
 					mysqli_query($cn,$s);

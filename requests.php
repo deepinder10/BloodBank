@@ -1,5 +1,9 @@
 <?php include('admin/function.php'); ?>
 <?php require 'header.php'; ?>
+<?php
+	require './Twilio/autoload.php';
+	use Twilio\Rest\Client;
+?>
 <div style="height:auto; width:500px; margin:auto; margin-top:10px; margin-bottom:10px; background-color:#f8f1e4; border:2px solid red; box-shadow:4px 1px 20px black;">
 	<form method="post" enctype="multipart/form-data">
 		<table cellpadding="0" cellspacing="0" width="500px" height="480px" style="margin:auto" >
@@ -114,6 +118,43 @@
 			
 			$q=mysqli_query($cn,$s);
 			mysqli_close($cn);
+			
+			$sid = 'ACffcf0765818b6e7d666378d49f9cc019';
+			$token = '72d2556f58d4b1a482fa98ef67d1d8ce';
+			$client = new Client($sid, $token);
+			$cn=makeconnection();
+
+				$id="select bg_id from bloodgroup where bg_name ="."'".$_POST['t4']."'";
+				$res=mysqli_query($cn,$id);
+				$bg_id = (mysqli_fetch_assoc($res));
+				$bg_id = $bg_id['bg_id'];
+				$numbers="select `mobile` from donarregistration where b_id =" . $bg_id;
+				$result=mysqli_query($cn,$numbers);
+
+				$people = array();
+
+				while($data=mysqli_fetch_array($result))
+				{
+					array_push($people,$data['mobile']);	
+				}
+
+			foreach ($people as $number) {
+
+        	$sms = $client->account->messages->create(
+
+            '+91'.$number,
+
+            array(
+                
+                'from' => "+14402204590", 
+                
+                // the sms body
+			 		'body' => 'Hello,Your blood is required by ' . $_POST["t1"] . ' at ' . $_POST["t8"].' . '.'Kindly login to view more details'
+            )
+        );
+			}
+		
+
 			if($q>0)
 			{
 				echo "<script>alert('Record Save');</script>";

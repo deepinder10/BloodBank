@@ -91,12 +91,13 @@ if($last != 1){
 <?php
 	while($data=mysqli_fetch_array($query))
 	{
-        $Weddingdate = new DateTime($data['7']);
+        $Weddingdate = new DateTime($data[7]);
         $date = date_format($Weddingdate, 'd-m-Y');
-        if((new DateTime($date) >= new DateTime(""))){
+
+        // if((new DateTime($date) >= new DateTime(""))){
             echo"<tr><td  style=' padding-left:50px'><a href='details.php?q=". $data[0] ."' target='PromoteFirefoxWindow'
  onclick='openRequestedPopup(this.href, this.target); return false;'>$data[6]</a></td><td  style=' padding-left:10px'>$data[1]</td><td  style=' padding-left:50px'>$data[4]</td><td  style=' padding-left:50px'>$data[5]</td><td  style=' padding-left:60px'>$date</td></tr>";
-        }
+        // }
 				
 			}
 			mysqli_close($cn);

@@ -26,6 +26,7 @@
   <script src="js/lightbox.min.js"></script>
   <script src="js/jquery-1.7.1.min.js" type="text/javascript"></script>
   <script src="js/jquery.flexslider.js" type="text/javascript"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
   
   <script type="text/javascript">
    $(function () {
@@ -56,6 +57,7 @@ function openRequestedPopup(strUrl, strWindowName) {
     windowObjectReference.focus();
   };
 }
+
 </script>
  <style type="text/css">
 body{ font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;}
@@ -65,7 +67,7 @@ div#pagination_controls > a:visited{ color:#06F; }
 </style>
 </head>
 
-<body>
+<body ng-app="myApp" ng-controller="myCtrl">
  <div class="h_bg">
   <div class="wrap">
     <div class="header">
