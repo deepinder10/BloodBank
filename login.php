@@ -17,7 +17,7 @@
 
 
 <tr><td class="lefttd">E-Mail</td><td><input type="email" name="t1" required="required"/></td></tr>
-<tr><td class="lefttd">Password</td><td><input type="password"name="t2"  required="required" pattern="[a-zA-Z0-9]{2,10}" title="please enter only character or numbers between 2 to 10 for password"  /></td></tr>
+<tr><td class="lefttd">Password</td><td><input type="password" name="t2"  required="required" pattern="[a-zA-Z0-9]{2,10}" title="please enter only character or numbers between 2 to 10 for password"  /></td></tr>
 
 
 <tr><td>&nbsp;</td><td><input type="submit" value="Log In" name="sbmt" style="border:0px; background:linear-gradient(#900,#D50000); width:100px; height:30px; border-radius:10px 1px 10px 1px; box-shadow:1px 1px 5px black; color:white; font-weight:bold; font-size:14px; text-shadow:1px 1px 6px black; "></td></tr>
@@ -45,12 +45,12 @@ if(isset($_POST["sbmt"]))
 {
 	
 	$cn=makeconnection();			
-
-			$s="select * from donarregistration where email='" . $_POST["t1"] . "' and pwd='" .$_POST["t2"] . "'";
+			$s="select * from donarregistration where email='" . $_POST["t1"] . "' and `pwd`='" .$_POST["t2"] . "'";
 			
 	$q=mysqli_query($cn,$s);
 	$r=mysqli_num_rows($q);
 	$p = mysqli_fetch_array($q);
+	print_r($r);
 	mysqli_close($cn);
 	if($r>0)
 	{

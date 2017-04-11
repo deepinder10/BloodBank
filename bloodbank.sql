@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 10, 2017 at 09:55 PM
+-- Generation Time: Apr 11, 2017 at 07:54 PM
 -- Server version: 10.1.19-MariaDB
 -- PHP Version: 5.6.28
 
@@ -210,7 +210,7 @@ CREATE TABLE `donarregistration` (
   `district_id` int(10) NOT NULL,
   `city_id` int(10) NOT NULL,
   `email` varchar(100) NOT NULL,
-  `pwd` int(100) NOT NULL,
+  `pwd` varchar(100) NOT NULL,
   `pic` varchar(1000) NOT NULL,
   `weight` varchar(50) DEFAULT NULL,
   `history` varchar(50) DEFAULT NULL,
@@ -222,32 +222,32 @@ CREATE TABLE `donarregistration` (
 --
 
 INSERT INTO `donarregistration` (`donar_id`, `name`, `gender`, `age`, `mobile`, `b_id`, `state_id`, `district_id`, `city_id`, `email`, `pwd`, `pic`, `weight`, `history`, `previousstat`) VALUES
-(1, 'Rajan Singh', 'male', '23', '12345678', 17, 9, 1, 4, 'fencemonir@gmail.com', 123, 'face.jpg', NULL, NULL, NULL),
-(2, 'Ram Singh', 'male', '20', '01673647342', 13, 9, 1, 4, 'fencemonir@gmail.com', 123, 'face.jpg', NULL, NULL, NULL),
-(3, 'Ahmad', 'male', '55', '5555', 13, 9, 1, 4, 'fencemonir@gmail.com', 123, 'face.jpg', NULL, NULL, NULL),
-(4, 'Tania Sharma', 'female', '20', '01673647342', 18, 9, 1, 5, 'tania@gamil.com', 12345, 'been.jpg', NULL, NULL, NULL),
-(5, 'Gurmukh Singh', 'male', '33', '2222222', 13, 16, 5, 8, 'hasib@gmail.com', 12345, 'been.jpg', NULL, NULL, NULL),
-(6, 'Hakam Singh', 'male', '33', '333', 13, 16, 5, 8, 'hasan@gmail.com', 12345, 'been.jpg', NULL, NULL, NULL),
-(7, 'donorOne', 'female', '22', '01673647342', 13, 9, 1, 4, 'donor1@gmail.com', 12345, 'face.jpg', NULL, NULL, NULL),
-(8, 'donorTwo', 'male', '7', '77777', 13, 9, 1, 4, 'donor2@gmail.com', 12345, 'confused-smiley-face-clip-art-35.png', NULL, NULL, NULL),
-(9, 'donorThree', 'male', '55', '77', 13, 9, 1, 4, 'donor3@gmail.com', 12345, 'been.jpg', NULL, NULL, NULL),
-(10, 'donorFour', 'male', '33', '111', 13, 9, 1, 4, 'donor4@gmail.com', 12345, 'been.jpg', NULL, NULL, NULL),
-(11, 'donorFive', 'male', '88', '348394', 13, 9, 1, 4, 'donor5@gmail.com', 12345, 'confused-smiley-face-clip-art-35.png', NULL, NULL, NULL),
-(12, 'donorSix', 'male', '88', '888888', 13, 9, 1, 4, 'donor6@gmail.com', 12345, 'been.jpg', NULL, NULL, NULL),
-(13, 'donorSeven', 'male', '88', '888888', 13, 9, 1, 4, 'donor7@gmail.com', 12345, 'confused-smiley-face-clip-art-35.png', NULL, NULL, NULL),
-(14, 'donorEight', 'male', '77', '7777777', 13, 9, 1, 4, 'donor7@gmail.com', 12345, 'face.jpg', NULL, NULL, NULL),
-(15, 'donorNine', 'male', '77', '77777', 13, 9, 1, 4, 'donor9@gmail.com', 12345, 'been.jpg', NULL, NULL, NULL),
-(16, 'donorTen', 'male', '202020', '020020', 13, 9, 1, 4, 'donor10@gmail.com', 12345, 'been.jpg', NULL, NULL, NULL),
-(17, 'donorEleven', 'male', '9', '333883', 13, 9, 1, 4, 'donor11@gmail.com', 12345, 'been.jpg', NULL, NULL, NULL),
-(18, 'Bhagwant Singh', 'male', '19', '01874648811', 13, 9, 1, 4, 'imran.khan308309@gmail.com', 12345, 'been.jpg', NULL, NULL, NULL),
-(19, 'Ridham Arora', 'male', '23', '01959904911', 13, 12, 20, 21, 'ridoy@gmail.com', 1234, '11053652_802274696530324_6313101808255885100_n.jpg', NULL, NULL, NULL),
-(20, 'Diksha', 'female', '23', '01959904989', 13, 9, 1, 5, 'jebin@gmail.com', 123, '13620129_278514022516479_3404196291774658685_n.jpg', NULL, NULL, NULL),
-(21, 'Rekha khanna', 'female', '23', '01959905256', 20, 14, 28, 0, 'rekha@gmail.com', 123, '1508102_871229962995991_3053231048824493108_n.jpg', NULL, NULL, NULL),
-(22, 'Gurpreet', 'male', '23', '9855652889', 17, 9, 0, 6, 'gurpreetkumar1201@gmail.com', 0, 'dp_48_KB.jpeg', NULL, NULL, NULL),
-(23, 'Gurpreet', 'male', '23', '9855552889', 19, 9, 1, 5, 'gurpreetkamboj1201@gmail.com', 0, 'blood-drop-blood-drive-images-co-clipart.jpg', NULL, NULL, NULL),
-(24, 'Anmol', 'male', '21', '8950871004', 17, 10, 23, 11, 'arsharora7@gmail.com', 123, 'blood-drop-blood-drive-images-co-clipart.jpg', NULL, NULL, NULL),
-(25, 'Jagtar', 'male', '25', '9999999999', 15, 9, 1, 5, 'jagtar@gmail.com', 0, 'blood-drop-blood-drive-images-co-clipart.jpg', NULL, NULL, NULL),
-(26, 'Gopi', 'male', '23', '8872245003', 18, 9, 5, 0, 'sa@gmail.com', 0, 'javascriptConcepts.png', '70', 'No', 'No');
+(1, 'Rajan Singh', 'male', '23', '12345678', 17, 9, 1, 4, 'fencemonir@gmail.com', '123', 'face.jpg', NULL, NULL, NULL),
+(2, 'Ram Singh', 'male', '20', '01673647342', 13, 9, 1, 4, 'fencemonir@gmail.com', '123', 'face.jpg', NULL, NULL, NULL),
+(3, 'Ahmad', 'male', '55', '5555', 13, 9, 1, 4, 'fencemonir@gmail.com', '123', 'face.jpg', NULL, NULL, NULL),
+(4, 'Tania Sharma', 'female', '20', '01673647342', 18, 9, 1, 5, 'tania@gamil.com', '12345', 'been.jpg', NULL, NULL, NULL),
+(5, 'Gurmukh Singh', 'male', '33', '2222222', 13, 16, 5, 8, 'hasib@gmail.com', '12345', 'been.jpg', NULL, NULL, NULL),
+(6, 'Hakam Singh', 'male', '33', '333', 13, 16, 5, 8, 'hasan@gmail.com', '12345', 'been.jpg', NULL, NULL, NULL),
+(7, 'donorOne', 'female', '22', '01673647342', 13, 9, 1, 4, 'donor1@gmail.com', '12345', 'face.jpg', NULL, NULL, NULL),
+(8, 'donorTwo', 'male', '7', '77777', 13, 9, 1, 4, 'donor2@gmail.com', '12345', 'confused-smiley-face-clip-art-35.png', NULL, NULL, NULL),
+(9, 'donorThree', 'male', '55', '77', 13, 9, 1, 4, 'donor3@gmail.com', '12345', 'been.jpg', NULL, NULL, NULL),
+(10, 'donorFour', 'male', '33', '111', 13, 9, 1, 4, 'donor4@gmail.com', '12345', 'been.jpg', NULL, NULL, NULL),
+(11, 'donorFive', 'male', '88', '348394', 13, 9, 1, 4, 'donor5@gmail.com', '12345', 'confused-smiley-face-clip-art-35.png', NULL, NULL, NULL),
+(12, 'donorSix', 'male', '88', '888888', 13, 9, 1, 4, 'donor6@gmail.com', '12345', 'been.jpg', NULL, NULL, NULL),
+(13, 'donorSeven', 'male', '88', '888888', 13, 9, 1, 4, 'donor7@gmail.com', '12345', 'confused-smiley-face-clip-art-35.png', NULL, NULL, NULL),
+(14, 'donorEight', 'male', '77', '7777777', 13, 9, 1, 4, 'donor7@gmail.com', '12345', 'face.jpg', NULL, NULL, NULL),
+(15, 'donorNine', 'male', '77', '77777', 13, 9, 1, 4, 'donor9@gmail.com', '12345', 'been.jpg', NULL, NULL, NULL),
+(16, 'donorTen', 'male', '202020', '020020', 13, 9, 1, 4, 'donor10@gmail.com', '12345', 'been.jpg', NULL, NULL, NULL),
+(17, 'donorEleven', 'male', '9', '333883', 13, 9, 1, 4, 'donor11@gmail.com', '12345', 'been.jpg', NULL, NULL, NULL),
+(18, 'Bhagwant Singh', 'male', '19', '01874648811', 13, 9, 1, 4, 'imran.khan308309@gmail.com', '12345', 'been.jpg', NULL, NULL, NULL),
+(19, 'Ridham Arora', 'male', '23', '01959904911', 13, 12, 20, 21, 'ridoy@gmail.com', '1234', '11053652_802274696530324_6313101808255885100_n.jpg', NULL, NULL, NULL),
+(20, 'Diksha', 'female', '23', '01959904989', 13, 9, 1, 5, 'jebin@gmail.com', '123', '13620129_278514022516479_3404196291774658685_n.jpg', NULL, NULL, NULL),
+(21, 'Rekha khanna', 'female', '23', '01959905256', 20, 14, 28, 0, 'rekha@gmail.com', '123', '1508102_871229962995991_3053231048824493108_n.jpg', NULL, NULL, NULL),
+(22, 'Gurpreet', 'male', '23', '9855652889', 17, 9, 0, 6, 'gurpreetkumar1201@gmail.com', 'uiet', 'dp_48_KB.jpeg', NULL, NULL, NULL),
+(23, 'Gurpreet', 'male', '23', '9855552889', 19, 9, 1, 5, 'gurpreetkamboj1201@gmail.com', 'puchd', 'blood-drop-blood-drive-images-co-clipart.jpg', NULL, NULL, NULL),
+(24, 'Anmol', 'male', '21', '8950871004', 17, 10, 23, 11, 'arsharora7@gmail.com', '123', 'blood-drop-blood-drive-images-co-clipart.jpg', NULL, NULL, NULL),
+(25, 'Jagtar', 'male', '25', '9999999999', 15, 9, 1, 5, 'jagtar@gmail.com', '0', 'blood-drop-blood-drive-images-co-clipart.jpg', NULL, NULL, NULL),
+(31, 'Deepi', 'male', '21', '9855866500', 13, 9, 1, 4, 'ss@gmail.com', 'pass', 'javascriptConcepts.png', '23', '42', '32');
 
 -- --------------------------------------------------------
 
@@ -425,7 +425,8 @@ INSERT INTO `requestes` (`req_id`, `name`, `gender`, `age`, `mobile`, `email`, `
 (89, 'jksdn', 'male', '12', '812121212', 's@g.com', 'B+', '2018-01-01 00:00:00', 'sdsd', 'pgi'),
 (90, 'jksdn', 'male', '12', '812121212', 's@g.com', 'B+', '2018-01-01 00:00:00', 'sdsd', 'pgi'),
 (91, 'jksdn', 'male', '12', '812121212', 's@g.com', 'B+', '2018-01-01 00:00:00', 'sdsd', 'pgi'),
-(92, 'jksdn', 'male', '12', '812121212', 's@g.com', 'B+', '2018-01-01 00:00:00', 'sdsd', 'pgi');
+(92, 'jksdn', 'male', '12', '812121212', 's@g.com', 'B+', '2018-01-01 00:00:00', 'sdsd', 'pgi'),
+(93, 'hdi', 'male', '12', '9891819819', 'ds@g.com', 'B+', '2018-01-01 00:00:00', 'sds', 'pgi');
 
 -- --------------------------------------------------------
 
@@ -587,7 +588,7 @@ ALTER TABLE `district`
 -- AUTO_INCREMENT for table `donarregistration`
 --
 ALTER TABLE `donarregistration`
-  MODIFY `donar_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `donar_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 --
 -- AUTO_INCREMENT for table `donation`
 --
@@ -607,7 +608,7 @@ ALTER TABLE `news`
 -- AUTO_INCREMENT for table `requestes`
 --
 ALTER TABLE `requestes`
-  MODIFY `req_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=93;
+  MODIFY `req_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=94;
 --
 -- AUTO_INCREMENT for table `state`
 --

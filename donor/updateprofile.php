@@ -109,7 +109,7 @@ if($_SESSION['donorstatus']=="")
    <table cellpadding="0" cellspacing="0" width="450px" align="center" >
     <tr><td class="lefttd"  style="vertical-align:middle"> Name </td><td><input type="text" name="t1" value="<?php echo @$name;  ?>"  required="required" pattern="[a-zA-Z _]{5,15}" title="please enter only character  between 5 to 15 for  name" /></td></tr>
          <tr><td>&nbsp;</td><td>&nbsp;</td></tr>
-<tr><td class="lefttd">Gender</td><td><input name="r1" type="radio" value="male"  <?php if($gender=="male"){ echo "checked" ;}  ?>>Male<input name="r1" checked="checked" type="radio" value="female" <?php if($gender=="female"){ echo "checked" ;}  ?> />Female</td></tr>
+<tr><td class="lefttd">Gender</td><td><input name="r1" type="radio" value="male"  <?php if($gender=="male"){ echo "checked" ;}  ?>>Male<input name="r1" type="radio" value="female" <?php if($gender=="female"){ echo "checked" ;}  ?> />Female</td></tr>
          <tr><td>&nbsp;</td><td>&nbsp;</td></tr>
         <tr><td class="lefttd"  style="vertical-align:middle"> Age</td><td><input type="text" name="t2"  required="required" pattern="[0-9]{2,2}" title="please enter only numbers  between 2 to 2 for age" value="<?php echo @$age;?>" /></td></tr>
          <tr><td>&nbsp;</td><td>&nbsp;</td></tr>

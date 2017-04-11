@@ -18,7 +18,7 @@
 						<tr><td class="lefttd">Gender</td><td><input name="r1" type="radio" value="male" checked="checked">Male<input name="r1" type="radio" value="female" >Female</td></tr>
 
 						<tr><td class="lefttd">Age</td><td><input type="number" name="t2" required="required" pattern="[0-9]{2,2}" title="please enter only  numbers between 2 to 2 for age" /></td></tr>
-						<tr><td class="lefttd">Mobile No</td><td><input type="number" name="t3" required="required" pattern="[0-9]{10,11}" title="please enter only numbers between 10 to 11 for mobile no." /></td></tr>
+						<tr><td class="lefttd">Mobile No</td><td><input type="text" name="t3" required="required" pattern="[789][0-9]{9}" maxlength="11" title="please enter only numbers between 10 to 11 for mobile no." /></td></tr>
 						<tr><td class="lefttd"> Blood Group </td><td><select name="t4" required><option value="">Select</option>
 							 <?php
 							$cn=makeconnection();
